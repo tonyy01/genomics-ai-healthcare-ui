@@ -1,6 +1,6 @@
 # Genomics AI Healthcare UI
 
-A reusable React UI component library for the Genomics and AI in Healthcare Lab.
+A reusable React UI component library for the Hong Kong JC STEM Lab of Genomics and AI in Healthcare
 
 ## 📦 Installation
 
@@ -12,6 +12,7 @@ npm install genomics-ai-healthcare-ui
 
 ```tsx
 import { Button, Card, Modal, Tabs } from 'genomics-ai-healthcare-ui'
+import 'genomics-ai-healthcare-ui/dist/style.css'
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
   )
 }
 ```
+
+> **Note:** Don't forget to import the CSS file! The components require the stylesheet to be imported for proper styling.
 
 ## 📚 Components
 
@@ -209,46 +212,3 @@ Genomics and AI in Healthcare Lab
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
-
-## 中文说明
-
-这是一个用于基因组学和人工智能医疗实验室的可复用 React UI 组件库。
-
-### 安装
-
-```bash
-npm install genomics-ai-healthcare-ui
-```
-
-### 使用示例
-
-```tsx
-import { Button, Card } from 'genomics-ai-healthcare-ui'
-
-function App() {
-  return (
-    <Button variant="primary">点击我</Button>
-  )
-}
-```
-
-### 可用组件
-
-- **Button** - 按钮组件
-- **Card** - 卡片组件
-- **Container** - 容器组件
-- **Section** - 区域组件
-- **Modal** - 模态框组件
-- **Dropdown** - 下拉菜单组件
-- **Tabs** - 标签页组件
-- **Link** - 链接组件
-- **Image** - 图片组件
-
-### 开发
-
-```bash
-npm install    # 安装依赖
-npm run dev    # 启动开发服务器
-npm run build  # 构建生产版本
-```
-

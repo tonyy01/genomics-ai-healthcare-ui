@@ -17,6 +17,9 @@ export interface TabsProps {
   className?: string
 }
 
+/**
+ * 标签页组件
+ */
 const Tabs = memo(function Tabs({
   tabs,
   defaultTab,
@@ -24,9 +27,7 @@ const Tabs = memo(function Tabs({
   variant = 'default',
   className = ''
 }: TabsProps) {
-  const [activeTab, setActiveTab] = useState(
-    defaultTab || tabs[0]?.id || ''
-  )
+  const [activeTab, setActiveTab] = useState(defaultTab || tabs[0]?.id || '')
 
   const handleTabChange = (tabId: string) => {
     const tab = tabs.find(t => t.id === tabId)
@@ -74,6 +75,3 @@ const Tabs = memo(function Tabs({
 Tabs.displayName = 'Tabs'
 
 export default Tabs
-
-
-

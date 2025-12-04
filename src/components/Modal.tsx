@@ -12,6 +12,9 @@ export interface ModalProps {
   className?: string
 }
 
+/**
+ * 模态框组件
+ */
 const Modal = memo(function Modal({
   isOpen,
   onClose,
@@ -88,6 +91,3 @@ const Modal = memo(function Modal({
 Modal.displayName = 'Modal'
 
 export default Modal
-
-
-

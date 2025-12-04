@@ -8,9 +8,9 @@ export interface DropdownOption {
   disabled?: boolean
 }
 
-interface DropdownProps {
+export interface DropdownProps {
   options: DropdownOption[]
-  value: string | number | null
+  value?: string | number
   onChange: (value: string | number) => void
   placeholder?: string
   disabled?: boolean
@@ -18,6 +18,9 @@ interface DropdownProps {
   variant?: 'default' | 'outlined'
 }
 
+/**
+ * 下拉选择组件
+ */
 const Dropdown = memo(function Dropdown({
   options,
   value,
@@ -28,7 +31,7 @@ const Dropdown = memo(function Dropdown({
   variant = 'default'
 }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const dropdownRef = useRef<HTMLDivElement | null>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -114,6 +117,3 @@ const Dropdown = memo(function Dropdown({
 Dropdown.displayName = 'Dropdown'
 
 export default Dropdown
-
-
-

@@ -1,6 +1,21 @@
 import { memo } from 'react'
 import './Button.css'
 
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode
+  variant?: 'text' | 'contained' | 'outlined'
+  size?: 'small' | 'medium' | 'large'
+  active?: boolean
+  className?: string
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+  style?: React.CSSProperties
+  disabled?: boolean
+  type?: 'button' | 'submit' | 'reset'
+}
+
+/**
+ * 通用按钮组件
+ */
 const Button = memo(function Button({
   children,
   variant = 'text',
@@ -12,7 +27,7 @@ const Button = memo(function Button({
   disabled = false,
   type = 'button',
   ...props
-}: any) {
+}: ButtonProps) {
   const classes = [
     'ui-button',
     `ui-button--${variant}`,
@@ -39,6 +54,3 @@ const Button = memo(function Button({
 Button.displayName = 'Button'
 
 export default Button
-
-
-

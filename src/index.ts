@@ -8,5 +8,13 @@ export { default as Modal } from './components/Modal'
 export { default as Dropdown } from './components/Dropdown'
 export { default as Tabs } from './components/Tabs'
 
-
-
+// Export types
+export type { ButtonProps } from './components/Button'
+export type { CardProps } from './components/Card'
+export type { LinkProps } from './components/Link'
+export type { ImageProps } from './components/Image'
+export type { SectionProps } from './components/Section'
+export type { ContainerProps } from './components/Container'
+export type { ModalProps } from './components/Modal'
+export type { DropdownProps, DropdownOption } from './components/Dropdown'
+export type { TabsProps, TabItem } from './components/Tabs'

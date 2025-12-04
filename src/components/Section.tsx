@@ -1,6 +1,17 @@
 import { memo } from 'react'
 import './Section.css'
 
+export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
+  children: React.ReactNode
+  className?: string
+  style?: React.CSSProperties
+  variant?: 'default' | 'centered' | 'fullwidth'
+  background?: boolean
+}
+
+/**
+ * 通用区块组件
+ */
 const Section = memo(function Section({
   children,
   className = '',
@@ -8,7 +19,7 @@ const Section = memo(function Section({
   variant = 'default',
   background = false,
   ...props
-}: any) {
+}: SectionProps) {
   const classes = [
     'ui-section',
     `ui-section--${variant}`,
@@ -26,6 +37,3 @@ const Section = memo(function Section({
 Section.displayName = 'Section'
 
 export default Section
-
-
-

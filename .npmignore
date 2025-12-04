@@ -1,0 +1,45 @@
+# Source files
+src/
+tsconfig.json
+vite.config.mts
+
+# Development files
+node_modules/
+*.log
+.DS_Store
+*.tgz
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test files
+__tests__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Build artifacts (keep dist/)
+*.map
+
+# Git
+.git/
+.gitignore
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+
+
+
+
+
+
+
+

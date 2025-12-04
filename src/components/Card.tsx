@@ -1,6 +1,17 @@
 import { memo } from 'react'
 import './Card.css'
 
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode
+  className?: string
+  style?: React.CSSProperties
+  elevated?: boolean
+  outlined?: boolean
+}
+
+/**
+ * 通用卡片组件
+ */
 const Card = memo(function Card({
   children,
   className = '',
@@ -8,7 +19,7 @@ const Card = memo(function Card({
   elevated = false,
   outlined = false,
   ...props
-}: any) {
+}: CardProps) {
   const classes = [
     'ui-card',
     elevated && 'ui-card--elevated',
@@ -26,6 +37,3 @@ const Card = memo(function Card({
 Card.displayName = 'Card'
 
 export default Card
-
-
-
