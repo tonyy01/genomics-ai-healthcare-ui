@@ -202,13 +202,4 @@ These are peer dependencies and should be installed in your project.
 ## 📝 License
 
 MIT License - see LICENSE file for details
-
-## 👥 Author
-
-Genomics and AI in Healthcare Lab
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ---
